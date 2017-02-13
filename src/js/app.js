@@ -1,6 +1,13 @@
 import m from 'mithril'
-import '../css/main.css'
+import '../css/main.css' // eslint-disable-line import/no-unassigned-import
 
-var root = document.getElementById('root')
+const Login = require('./views/login.view')
+const Layout = require('./views/layout.view')
 
-m.render(root, m('h1', 'My first page!'))
+m.route(document.body, '/login', {
+	'/login': {
+		render: function () {
+			return m(Layout, m(Login))
+		}
+	}
+})

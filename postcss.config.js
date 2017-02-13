@@ -1,8 +1,8 @@
 module.exports = {
 	plugins: [
-		require("stylelint"),
+		require('stylelint'),
 		require('postcss-cssnext'),
-		require("postcss-reporter")({
+		require('postcss-reporter')({
 			clearMessages: true
 		})
 	]
