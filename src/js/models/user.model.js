@@ -1,8 +1,20 @@
 import m from 'mithril'
+import _ from 'lodash'
+
+const authUserDefaults = {
+	username: '',
+	password: ''
+}
+
+const currentUserDefaults = {
+	firstName: '',
+	lastName: '',
+	email: ''
+}
 
 const User = {
-	authUser: {},
-	currentUser: {},
+	authUser: _.assign({}, authUserDefaults),
+	currentUser: _.assign({}, currentUserDefaults),
 	authenticate() {
 		return m.request({
 			method: 'POST',
@@ -16,7 +28,7 @@ const User = {
 		})
 	},
 	resetAuth() {
-		User.authUser = {}
+		_.assign(User.authUser, authUserDefaults)
 	},
 	logout() {
 		return m.request({
@@ -25,7 +37,7 @@ const User = {
 			withCredentials: true
 		})
 		.then(() => {
-			User.currentUser = {}
+			_.assign(User.currentUser, authUserDefaults)
 		})
 	}
 }

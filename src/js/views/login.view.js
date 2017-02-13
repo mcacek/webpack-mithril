@@ -8,18 +8,18 @@ module.exports = {
 			m('fieldset', [
 				m('.row', [
 					m('input[type=text][placeholder=Username]', {
+						value: User.authUser.username,
 						oninput: m.withAttr('value', function (value) {
 							User.authUser.username = value
-						}),
-						value: User.authUser.username
+						})
 					})
 				]),
 				m('.row', [
 					m('input[type=password][placeholder=Password]', {
+						value: User.authUser.password,
 						oninput: m.withAttr('value', function (value) {
 							User.authUser.password = value
-						}),
-						value: User.authUser.password
+						})
 					})
 				]),
 				m('.row', [
