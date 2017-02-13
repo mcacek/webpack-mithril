@@ -2,15 +2,15 @@ import m from 'mithril'
 
 module.exports = {
 	view() {
-		return m('fieldset', [
-			m('form.userAuth', [
-				m('.login-username', [
+		return m('form.userAuth', [
+			m('fieldset', [
+				m('.row', [
 					m('input[type=text][placeholder=Username]')
 				]),
-				m('.login-password', [
+				m('.row', [
 					m('input[type=password][placeholder=Password]')
 				]),
-				m('.login-controls', [
+				m('.row', [
 					m('button', 'Login')
 				])
 			])

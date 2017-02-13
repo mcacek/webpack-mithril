@@ -19,7 +19,8 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.8.0",
     "stylelint-order": "^0.2.2",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "wingcss": "^0.1.9"
   },
   "scripts": {
     "build": "webpack",
@@ -30,12 +31,18 @@
   },
   "xo": {
     "semicolon": false,
-    "env": ["browser"],
+    "env": [
+      "browser"
+    ],
     "rules": {
-      "quotes": ["error", "single", {
-        "allowTemplateLiterals": true,
-        "avoidEscape": true
-      }]
+      "quotes": [
+        "error",
+        "single",
+        {
+          "allowTemplateLiterals": true,
+          "avoidEscape": true
+        }
+      ]
     }
   }
 }
