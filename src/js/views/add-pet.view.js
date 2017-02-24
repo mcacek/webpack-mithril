@@ -1,6 +1,6 @@
 import m from 'mithril'
 
-module.exports = {
+export default {
 	view() {
 		return m('.add-pet-view', [
 			m('h2', 'Add Pet')

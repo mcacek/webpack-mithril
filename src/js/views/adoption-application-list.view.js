@@ -1,6 +1,6 @@
 import m from 'mithril'
 
-module.exports = {
+export default {
 	view() {
 		return m('.application-list-view', [
 			m('h2', 'Applications')

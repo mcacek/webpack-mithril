@@ -1,37 +1,60 @@
 import m from 'mithril'
+import {
+	createComponent,
+	run
+} from 'meiosis'
+import {
+	renderer
+} from 'meiosis-mithril'
 import '../css/main.css' // eslint-disable-line import/no-unassigned-import
 
-const Layout = require('./views/layout.view')
-const Login = require('./views/login.view')
-const PetList = require('./views/pet-list.view')
-const AddPet = require('./views/add-pet.view')
-const AdoptionApplication = require('./views/adoption-application.view')
-const AdoptionApplicationList = require('./views/adoption-application-list.view')
+import Layout from './views/layout.view'
+import Login from './views/login.view'
+import PetList from './views/pet-list.view'
+import AddPet from './views/add-pet.view'
+import AdoptionApplication from './views/adoption-application.view'
+import AdoptionApplicationList from './views/adoption-application-list.view'
 
-m.route(document.body, '/login', {
-	'/login': {
-		render() {
-			return m(Layout, m(Login))
+const initialModel = {
+	currentUser: null,
+	authDetails: null
+}
+
+const view = function view(model, propose) {
+	return m.route(document.body, '/login', {
+		'/login': {
+			render() {
+				return m(Layout, m(Login))
+			}
+		},
+		'/pets': {
+			render() {
+				return m(Layout, m(PetList))
+			}
+		},
+		'/pets/add': {
+			render() {
+				return m(Layout, m(AddPet))
+			}
+		},
+		'/pets/:id/adopt': {
+			render() {
+				return m(Layout, m(AdoptionApplication))
+			}
+		},
+		'/applications': {
+			render() {
+				return m(Layout, m(AdoptionApplicationList))
+			}
 		}
-	},
-	'/pets': {
-		render() {
-			return m(Layout, m(PetList))
-		}
-	},
-	'/pets/add': {
-		render() {
-			return m(Layout, m(AddPet))
-		}
-	},
-	'/pets/:id/adopt': {
-		render() {
-			return m(Layout, m(AdoptionApplication))
-		}
-	},
-	'/applications': {
-		render() {
-			return m(Layout, m(AdoptionApplicationList))
-		}
-	}
+	})
+}
+
+const Main = createComponent({
+	view: view
+})
+
+run({
+	renderer: renderer().intoId(document, 'app'),
+	rootComponent: Main
 })

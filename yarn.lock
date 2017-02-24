@@ -2887,6 +2887,20 @@ math-expression-evaluator@^1.2.14:
   version "1.2.16"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.16.tgz#b357fa1ca9faefb8e48d10c14ef2bcb2d9f0a7c9"
 
+meiosis-mithril@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/meiosis-mithril/-/meiosis-mithril-0.8.0.tgz#700b716449341cb7aa29fbec41aab8ba7cfcd8e1"
+  dependencies:
+    meiosis-render "^0.8.0"
+
+meiosis-render@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/meiosis-render/-/meiosis-render-0.8.0.tgz#2a604d3138673e27175bf7d7e54d9c221433babe"
+
+meiosis@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/meiosis/-/meiosis-0.9.0.tgz#5b42cb7cce8e5960bbfc788dbd7a7b0ef3b54042"
+
 memory-fs@^0.4.0, memory-fs@~0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
