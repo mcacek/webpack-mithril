@@ -1,6 +1,6 @@
 var m = require('mithril')
 
-module.exports = {
+export default {
 	view: function (vnode) {
 		return m('main#layout-view', [
 			m('nav.layout-view-nav', [

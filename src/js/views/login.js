@@ -1,7 +1,7 @@
 import m from 'mithril'
 import User from '../models/user.model'
 
-module.exports = {
+export default {
 	view() {
 		return m('form.userAuth', [
 			m('h2', 'User Signin'),

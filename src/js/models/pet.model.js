@@ -19,4 +19,4 @@ const Pet = {
 	}
 }
 
-module.exports = Pet
+export default Pet
