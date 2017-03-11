@@ -29,4 +29,4 @@ const AdoptionApplication = {
 	}
 }
 
-module.exports = AdoptionApplication
+export default AdoptionApplication
