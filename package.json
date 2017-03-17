@@ -26,12 +26,14 @@
   "scripts": {
     "build": "webpack",
     "check": "xo",
-    "test": "ava"
+    "test": "ava",
+    "dev": "webpack-dev-server"
   },
   "devDependencies": {
     "ava": "0.18.2",
     "browser-env": "2.0.25",
     "wallaby-webpack": "0.0.34",
+    "webpack-dev-server": "^2.4.2",
     "xo": "0.17.1"
   },
   "ava": {
