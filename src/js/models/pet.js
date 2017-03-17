@@ -1,12 +1,16 @@
 import m from 'mithril'
+import config from '../config'
 
 const Pet = {
 	newPetModel: {},
-	list() {
+	list: [],
+	loadList() {
 		return m.request({
 			method: 'GET',
-			url: 'http://localhost:8001/api/pets',
-			withCredentials: true
+			url: `${config.baseURI}/pets`
+		})
+		.then(result => {
+			Pet.list = result
 		})
 	},
 	create() {
