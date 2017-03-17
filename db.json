@@ -1,0 +1,22 @@
+{
+	"pets": [
+		{
+			"id": 1,
+			"type": "DOG",
+			"name": "Wren",
+			"age": 2
+		},
+		{
+			"id": 2,
+			"type": "DOG",
+			"name": "Roo",
+			"age": 2
+		},
+		{
+			"id": 3,
+			"type": "DOG",
+			"name": "Charlie",
+			"age": 2
+		}
+	]
+}

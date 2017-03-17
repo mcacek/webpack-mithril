@@ -1,5 +1,5 @@
 import m from 'mithril'
-import User from '../models/user.model'
+import User from '../models/user'
 
 export default {
 	view() {
