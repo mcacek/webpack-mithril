@@ -1,0 +1,54 @@
+.card {
+	background-color: #ffffff;
+	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	padding: 1em;
+	@media all and (min-width: 769px) {
+		text-align: center;
+	}
+}
+
+.pet-avatar {
+	background-color:#24394A;
+	border-radius: 50px;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	height:34px;
+	margin-right: 1em;
+	padding-top:6px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 40px;
+
+	@media all and (min-width: 769px) {
+		display: block;
+		font-size: 2.5em;
+		height: 79px;
+		margin-bottom: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 21px;
+		text-align: center;
+		width: 100px;
+	}
+}
+
+.pet-card-name {
+	display: inline-block;
+
+	@media all and (min-width: 769px) {
+		display: block;
+	}
+}
+
+.card-controls {
+	margin-top: 1em;
+	text-align: left;
+
+	& > a {
+		padding: .5em;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}

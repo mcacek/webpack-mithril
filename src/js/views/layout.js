@@ -6,7 +6,7 @@ export default {
 			m('nav.layout-view-nav', [
 				m('h1.app-title', 'Webpack Mithril')
 			]),
-			m('section', vnode.children)
+			m('section.container', vnode.children)
 		])
 	}
 }

@@ -1,7 +1,9 @@
 @import '../../node_modules/wingcss/dist/wing.min.css';
 @import 'views/layout.css';
+@import 'cards.css';
 
 body {
+	background-color: #FAFAFA;
 	margin: 0;
 }
 

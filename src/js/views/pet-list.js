@@ -7,7 +7,7 @@ export default {
 	view() {
 		return m('.pet-list-view', [
 			m('h2', 'Adoptable Pets'),
-			m('.pet-list', PetModel.list.map(pet => {
+			m('.pet-list.row', PetModel.list.map(pet => {
 				return m(PetListItem, pet)
 			}))
 		])
