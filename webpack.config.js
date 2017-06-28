@@ -40,5 +40,6 @@ module.exports = {
 	output: {
 		filename: '[chunkhash].[name].js',
 		path: path.resolve(__dirname, 'dist')
-	}
+	},
+	devtool: 'eval-source-map'
 }

@@ -1,19 +1,26 @@
 import m from 'mithril'
+import config from '../config'
 
 const User = {
 	authUser: {},
-	currentUser: {},
+	currentUser: {
+		roles: []
+	},
 	authenticate() {
 		return m
 			.request({
-				method: 'POST',
-				url: 'http://localhost:8001/api/authenticate',
+				method: 'GET',
+				url: `${config.baseURI}/users?username=${User.authUser.username}&password=${User.authUser.password}`,
 				data: User.authUser,
 				withCredentials: true
 			})
-			.then(res => {
-				res.currentUser = res
+			.then(results => {
 				User.resetAuth()
+
+				if (results[0]) {
+					User.currentUser = results[0]
+					m.route.set('/pets')
+				}
 			})
 	},
 	resetAuth() {
@@ -27,7 +34,9 @@ const User = {
 				withCredentials: true
 			})
 			.then(() => {
-				User.currentUser = {}
+				User.currentUser = {
+					roles: []
+				}
 			})
 	}
 }
