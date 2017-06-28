@@ -1,22 +1,41 @@
 {
-	"pets": [
-		{
-			"id": 1,
-			"type": "DOG",
-			"name": "Wren",
-			"age": 2
-		},
-		{
-			"id": 2,
-			"type": "DOG",
-			"name": "Roo",
-			"age": 2
-		},
-		{
-			"id": 3,
-			"type": "DOG",
-			"name": "Charlie",
-			"age": 2
-		}
+  "pets": [
+    {
+      "id": 1,
+      "type": "DOG",
+      "name": "Wren",
+      "age": 2
+    },
+    {
+      "id": 2,
+      "type": "DOG",
+      "name": "Roo",
+      "age": 2
+    },
+    {
+      "id": 3,
+      "type": "DOG",
+      "name": "Charlie",
+      "age": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "password",
+      "roles": [
+        "admin",
+        "authenticated"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "password",
+      "roles": [
+        "authenticated"
+      ]
+    }
 	]
 }
